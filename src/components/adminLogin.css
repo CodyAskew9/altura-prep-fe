@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-image: url('../utilities/images/altura.png');
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+.background{
+    height: 100vh;
+    width:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color:  gray;
+    font-size: 1.9rem;
+    margin-top: 25%;
+}
