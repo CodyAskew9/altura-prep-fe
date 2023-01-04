@@ -46,7 +46,6 @@
   background-repeat: no-repeat;}
 .rows{
   display: flex;
-  justify-content: space-between;
   list-style: none;
   padding-top: ;
 }
