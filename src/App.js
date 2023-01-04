@@ -5,7 +5,6 @@ import Login from './components/Login';
 import Books from './components/books';
 import Users from './components/users';
 import NewUser from './components/newUser';
-import AdminLogin from './components/AdminLogin'
 import NewBook from './components/newBook';
 import Nav from 'react-bootstrap/Nav';
 
@@ -23,14 +22,11 @@ function App() {
       <Nav.Item>
         <Nav.Link as={Link}to='/NewBook' >New Book</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link as={Link}to='/AdminLogin' >Admin</Nav.Link>
-      </Nav.Item>
+     
       </Nav>
     
     <Routes>
        <Route path='/' element={<Login/>} />
-       <Route path='/AdminLogin' element={<AdminLogin/>} />
        <Route path='/User' element={<Users />} />
        <Route path='/Books' element={<Books />} />
        <Route path='/NewUser' element={<NewUser />} />
