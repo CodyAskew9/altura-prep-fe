@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+.links {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+  background-image: url('./utilities/images/altura.png');
+  background-repeat: no-repeat;}
+.rows{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-top: ;
+}
