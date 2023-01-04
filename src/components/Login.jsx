@@ -6,6 +6,8 @@ import './Login.css'
 
 const Login = () => {
   return (
+    <div className='Main'>
+
     <div className='container'>
         <div className='background'>
     <Form>
@@ -17,6 +19,7 @@ const Login = () => {
 <Button variant='primary' type='submit'>Submit</Button>
     </Form>
         </div>
+    </div>
     </div>
   )
 }
