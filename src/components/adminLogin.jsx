@@ -2,7 +2,7 @@ import React from 'react'
 import  Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const adminLogin = () => {
+const AdminLogin = () => {
   return (
     <Form>
     
@@ -19,4 +19,4 @@ const adminLogin = () => {
   )
 }
 
-export default adminLogin
+export default AdminLogin
