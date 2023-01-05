@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 
 const Users = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] =useState()
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users/1')
