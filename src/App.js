@@ -1,28 +1,31 @@
 
-import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login from './components/Login';
-import Books from './components/books';
-import Users from './components/users';
-import NewUser from './components/newUser';
-import NewBook from './components/newBook';
-import Nav from 'react-bootstrap/Nav';
-import NavBar from './components/navbar';
+import { BrowserRouter, Route } from "react-router-dom";
+
+import Login from "./screens/Login"
+import AdminLogin from "./screens/AdminLogin"
+import Home from "./screens/Home"
+
+import Dashboard from "./screens/Dashboard"
+import SignInForm from "./components/Form/Register"
 
 function App() {
   return (
-    <>
+    <div>
+      <BrowserRouter>
 
-<NavBar />
-    <Routes>
-       <Route path='/' element={<Login/>} />
-       <Route path='/User' element={<Users />} />
-       <Route path='/Books' element={<Books />} />
-       <Route path='/NewUser' element={<NewUser />} />
-       <Route path='/NewBook' element={<NewBook />} />
-    </Routes>
-    </>
-   
+        <Route path="/" exact component={Home} />
+        <Route path="/register" exact component={SignInForm} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/adminLogin" exact component={AdminLogin} />
+        {/* <Route path="/addBook" exact component={AddBook} />
+        <Route path="/allBook" exact component={AllBook} />
+        <Route path="/manageStudent" exact component={AllStudent} />
+        <Route path="/stuReqIssue" exact component={Messages} /> */}
+        <Route path="/dashboard"  component={Dashboard} />
+
+      </BrowserRouter>
+    </div>
   );
 }
 
