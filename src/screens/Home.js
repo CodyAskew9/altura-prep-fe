@@ -11,12 +11,12 @@ const Home = () => {
                 <div className="card"style={{marginLeft:"15%"}}>
                    <img src={AdminIMage} alt="StudentIMage" style={{height:"250px",width:"250px"}} />
                    <br />
-                   <Link className="link_class" to="/adminLogin"> <h3 style={{fontFamily:"Oswald"}}>Signin as  Admin</h3></Link>
+                   <Link className="link_class" to="/adminLogin"> <h3 style={{fontFamily:"Oswald"}}>Sign-in as  Admin</h3></Link>
                 </div>
                 <div className="card" style={{marginLeft:"10%"}}>
                    <img src={StudentIMage} alt="StudentIMage" style={{height:"250px",width:"250px"}} />
                    <br />
-                   <Link className="link_class" to="/login"> <h3 style={{fontFamily:"Oswald"}}>Signin as  Student</h3></Link>  
+                   <Link className="link_class" to="/login"> <h3 style={{fontFamily:"Oswald"}}>Sign-in as  Student</h3></Link>  
                 </div>
             </div>
             {/* <div>
