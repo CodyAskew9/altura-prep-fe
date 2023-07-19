@@ -46,10 +46,10 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
            
 
         }
-        const {title,author,publisher,year,_id,copies} = book ;
+        const {title,author,publisher,isbn,_id,copies} = book ;
      
         const issueUser = {
-            title,author,publisher,year,userId,bookId:_id,userBranch,userName,copies
+            title,author,publisher,isbn,userId,bookId:_id,userBranch,userName,copies
         }
         if(book.copies){
             dispatch(issueABook(issueUser))
@@ -68,7 +68,7 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
     return (
         <div>
                <div className="col-md-10 m-auto" >
-                  <h3 className='text-center bg-info p-2' style={{fontFamily:"sans-serif",}}>All AVAILABLE BOOk IN LIBARY</h3>
+                  <h3 className='text-center bg-info p-2' style={{fontFamily:"sans-serif",}}>All AVAILABLE BOOk IN LIBRARY</h3>
                   <br />
                   <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
                  <Toast.Body style={{backgroundColor:"green",color:"white",fontSize:"18px"}}>You successfully send issue request for {bootTitle}  </Toast.Body>

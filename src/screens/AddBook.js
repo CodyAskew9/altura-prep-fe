@@ -7,14 +7,14 @@ const AddBook = () => {
     const[title,setTitle] = useState("")
     const[author,setAuthor] = useState("")
     const[publisher,setPublisher] = useState("")
-    const[year,setYear] = useState("")
+    const[isbn,setIsbn] = useState("")
     const[copies,setCopies] = useState("")
     const [show, setShow] = useState(false);
 
     const dispatch = useDispatch()
 
       const PostData = () => {
-        const book = { title,author,publisher,year,copies };
+        const book = { title,author,publisher,isbn,copies };
         
         dispatch(addOneBook(book));
         setShow(true)
@@ -22,7 +22,7 @@ const AddBook = () => {
         setAuthor("")
         setPublisher("")
         setCopies("")
-        setYear("")
+        setIsbn("")
     };
     return (
         <div  className=" mt-5">
@@ -46,8 +46,8 @@ const AddBook = () => {
                         onChange={(e) => setPublisher(e.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
-                        <input type="text" placeholder="Year" value={year} style={{height:"60px"}}
-                         onChange={(e) => setYear(e.target.value)} className="form-control" />
+                        <input type="text" placeholder="isbn" value={isbn} style={{height:"60px"}}
+                         onChange={(e) => setIsbn(e.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                         <input type="text"

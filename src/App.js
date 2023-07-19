@@ -4,8 +4,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Login from "./screens/Login"
 import AdminLogin from "./screens/AdminLogin"
-import Home from "./screens/Home"
-
+import Home from "./screens/Home";
+import AddBook from './screens/AddBook';
+import Messages from './screens/Messages';
+import AllBook from './screens/AllBook';
+import AllStudent from './screens/AllStudent';
 import Dashboard from "./screens/Dashboard"
 import SignInForm from "./components/Form/Register"
 
@@ -18,10 +21,10 @@ function App() {
         <Route path="/register" exact component={SignInForm} />
         <Route path="/login" exact component={Login} />
         <Route path="/adminLogin" exact component={AdminLogin} />
-        {/* <Route path="/addBook" exact component={AddBook} />
+        <Route path="/addBook" exact component={AddBook} />
         <Route path="/allBook" exact component={AllBook} />
         <Route path="/manageStudent" exact component={AllStudent} />
-        <Route path="/stuReqIssue" exact component={Messages} /> */}
+        <Route path="/stuReqIssue" exact component={Messages} />
         <Route path="/dashboard"  component={Dashboard} />
 
       </BrowserRouter>
