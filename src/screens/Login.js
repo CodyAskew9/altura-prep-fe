@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import StudentIMage from "../Images/student4.jpg"
 const Login = () => {
 
-    const [password, setPassword] = useState("123456");
+    const [password, setPassword] = useState("123");
     const[show,setShow] = useState("password") 
-    const [roll_no, setRoll_no] = useState("CS3150")
+    const [roll_no, setRoll_no] = useState("")
     const dispatch = useDispatch()
 
     const PostData = () => {
