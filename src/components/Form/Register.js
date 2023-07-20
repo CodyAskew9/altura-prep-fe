@@ -55,9 +55,12 @@ const SignInForm = () => {
           <div className="container">
               <div style={{marginLeft:"37%"}}>
                         <div id="circle"></div>
-                          <h1  style={{color:"black",marginLeft:"44px",marginTop:"-70px",fontSize:"45px"}}>LMS</h1>
+                        <Link to="/">
+
+                          <h1  style={{color:"black",marginLeft:"44px",marginTop:"-70px",fontSize:"45px"}}>Altura LMS</h1>
+                        </Link>
                         </div>
-                        <p style={{color:"black",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
+                        <p style={{color:"black",fontWeight:"800",textAlign:"center"}}>Welcome to Library
 Management System</p>
           
             <Form>
@@ -129,7 +132,7 @@ Management System</p>
               </div>
 
               <div className="form-row">
-                <label htmlFor="year">admmission Year </label>
+                <label htmlFor="year">Admission Year </label>
                 <Field
                   type="number"
                   name="year"
@@ -154,7 +157,7 @@ Management System</p>
             <Link to="/login" 
              style={{
                fontFamily:"sans-serif",color:"black",textDecoration:"none",fontSize:"20px"}}>
-                 If You have account then plz login</Link>
+                 If You Have Account Then Please Login Here</Link>
             </div>
            
           </div>

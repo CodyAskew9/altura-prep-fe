@@ -68,17 +68,17 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
     return (
         <div>
                <div className="col-md-10 m-auto" >
-                  <h3 className='text-center bg-info p-2' style={{fontFamily:"sans-serif",}}>All AVAILABLE BOOk IN LIBRARY</h3>
+                  <h3 className='text-center bg-info p-2' style={{fontFamily:"sans-serif",}}>All AVAILABLE BOOKS IN LIBRARY</h3>
                   <br />
                   <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
-                 <Toast.Body style={{backgroundColor:"green",color:"white",fontSize:"18px"}}>You successfully send issue request for {bootTitle}  </Toast.Body>
+                 <Toast.Body style={{backgroundColor:"green",color:"white",fontSize:"18px"}}>You successfully sent issue request for {bootTitle}  </Toast.Body>
                   </Toast>
               
 
               
             </div>
 
-            {error && <div className="alert alert-danger"> You have already request for this book </div>}
+            {error && <div className="alert alert-danger"> You already have a request for this book </div>}
          
            {    !books.length ?
            <div style={{marginLeft:"40%",marginTop:"5%"}}>

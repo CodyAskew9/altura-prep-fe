@@ -31,10 +31,9 @@ const Login = () => {
                     <div className="col-md-6 m-auto" style={{opacity:1}}>
                         <div style={{marginLeft:"37%"}}>
                         <div id="circle"></div>
-                          <h3 className="LMS" style={{fontFamily:"sans-serif"}}>LMS</h3>
+                         <Link to="/"> <h3 className="LMS" style={{fontFamily:"sans-serif", textDecorationLine:"none"}}> Altura LMS</h3></Link>
                         </div>
-                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
-Management System</p>
+                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Altura LMS</p>
 <img src={StudentIMage} alt="StudentIMage" style={{height:"220px",width:"220px",borderRadius:"50%"}} />
                     <div style={{marginTop:"20px"}}>
                         <input type="text" className="form-control" style={{height:"60px",borderRadius:"20px"}}
@@ -56,7 +55,7 @@ Management System</p>
                     </button>
                     </div>
                     <br />
-                    <Link to="/register"  style={{fontFamily:"sans-serif",color:"white",textDecoration:"none"}}>Ifyou don't have account then plz Register</Link>
+                    <Link to="/register"  style={{fontFamily:"sans-serif",color:"white",textDecoration:"none"}}>Register New Student</Link>
                
             </div>
         </div>

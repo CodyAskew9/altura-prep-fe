@@ -27,12 +27,12 @@ const Issue_Return = () => {
         <div className="col-md-10 m-auto pt-4">
         {!filterd.length  ? <>
         <div className="bg-success p-2 text-center">
-        <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"white"}}>Yet No booked Issued Today</h4>
+        <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"white"}}> No Books Issued Today</h4>
         </div>
         
         </> : 
         <>
-          <h4 style={{textAlign:"center",fontFamily:"sans-serif"}}>Today Issued Book</h4>
+          <h4 style={{textAlign:"center",fontFamily:"sans-serif"}}>Todays Issued Book</h4>
           <table  className='table table-bordered table-responsive-sm'>
 
 <thead className='thead-dark bg-info'>

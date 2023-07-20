@@ -32,7 +32,8 @@ const AdminLogin = () => {
                     <div className="col-md-6 m-auto" style={{opacity:1}}>
                         <div style={{marginLeft:"37%"}}>
                         <div id="circle"></div>
-                          <h3 className="LMS" style={{fontFamily:"sans-serif"}}>LMS</h3>
+                        <Link to="/">  <h3 className="LMS" style={{fontFamily:"sans-serif"}}> Altura LMS</h3>
+                        </Link>
                         </div>
                         <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
 Management System</p>

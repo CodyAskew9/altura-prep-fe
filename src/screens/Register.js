@@ -33,9 +33,11 @@ const Register = () => {
             <div className="login_container">
             <div style={{marginLeft:"44%"}}>
                         <div id="circle"></div>
-                          <h3 className="LMS_R">LMS</h3>
+                       <Link to="/">
+                         <h3 className="LMS_R"> Alrura LMS</h3>
+                       </Link>  
                         </div>
-            <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
+            <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Library
 Management System</p>
                 {/* <div className="col-md-8 m-auto" >
                     <div className="mb-2">
@@ -59,7 +61,7 @@ Management System</p>
                         onChange={(e) => setBranch(e.target.value)} className="form-control" />
                     </div>
                     <div>
-                        <input type="text" placeholder="addmission year" style={{height:"60px",}}
+                        <input type="text" placeholder="admission year" style={{height:"60px",}}
                          onChange={(e) => setYear(e.target.value)} className="form-control" />
                     </div>
 

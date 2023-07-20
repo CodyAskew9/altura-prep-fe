@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="container-fluid">
                
                 <a className="navbar-brand" href="/dashboard" 
-                style={{fontFamily:"oswald",fontSize:"30px",marginTop:"-4px"}}>Libary Management System</a>
+                style={{fontFamily:"oswald",fontSize:"30px",marginTop:"-4px"}}>Altura LMS</a>
                 <p style={{textAlign:"center",marginRight:"10%",fontFamily:"sans-serif",fontSize:"24px"}}>
                 <i className="far fa-user "></i> { " "}{ currentUser && currentUser.user.name.split(" ")[0]}</p>
             </div>
