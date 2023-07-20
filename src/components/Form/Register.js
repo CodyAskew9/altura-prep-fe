@@ -7,6 +7,8 @@ import "yup-phone";
 import "./Register.css"
 import { useDispatch } from 'react-redux'
 import {registerUser} from "../../actions/user_action"
+import Barcode from 'react-barcode';
+
 
 const signInSchema = Yup.object().shape({
     name:Yup.string()
@@ -119,7 +121,7 @@ Management System</p>
                 <ErrorMessage name="branch" component="span" className="error" />
               </div>
               <div className="form-row">
-                <label htmlFor="roll_no">Roll No </label>
+                <label htmlFor="roll_no">ISBN</label>
                 <Field
                   type="text"
                   name="roll_no"

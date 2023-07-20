@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {getAllStudent,removeAStudent} from "../actions/user_action"
 import { useDispatch, useSelector } from 'react-redux'
+import Barcode from 'react-barcode';
 
 const AllStudent = () => {
     const dispatch = useDispatch()
@@ -30,9 +31,7 @@ const AllStudent = () => {
     return <tr key={student._id}>
            <td>{index+1}</td>
         <td>{student.name}</td>
-        <td>
-            {student.roll_no}
-        </td>
+        <Barcode value={student.roll_no}/>
         <td>{student.branch}</td>
         <td>{student.addmission_year}</td>
         <td>
