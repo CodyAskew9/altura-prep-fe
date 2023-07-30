@@ -6,7 +6,7 @@ export const addOneBook = (book)=> async dispatch =>{
     })
   
     try {
-        const response = await axios.post('/api/books/addBook',book);
+        const response = await axios.post('http://altura-prep-library-be-production.up.railway.app/api/books/addBook',book);
          
         dispatch({
            type:'ADD_BOOK_SUCCESS',
@@ -25,7 +25,7 @@ export const getAllBook = ()=> async dispatch =>{
         type:'GET_BOOKS_REQUEST'
     })
     try {
-        const response = await axios.get('/api/books/allBook');
+        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/books/allBook');
      
         dispatch({
            type:'GET_BOOKS_SUCCESS',
@@ -45,7 +45,7 @@ export const filterBook = (searchKey)=> async dispatch =>{
     })
     var filterItem ;
     try {
-        const response = await axios.get('/api/books/allBook');
+        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/books/allBook');
         filterItem = response.data.filter(pizza => pizza.isbn.toLowerCase().includes(searchKey.toLowerCase()));
       
         dispatch({

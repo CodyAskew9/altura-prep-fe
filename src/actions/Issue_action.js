@@ -6,7 +6,7 @@ export const issueABook = (book)=> async dispatch =>{
     })
   
     try {
-        const response = await axios.post('/api/issues/issueRequest',book);
+        const response = await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/issueRequest',book);
         // const response2 = await axios.get('/api/books/allBook');
      
        
@@ -30,7 +30,7 @@ export const singleissueABook = (postId)=> async dispatch =>{
     })
     
     try {
-        const response = await axios.post('/api/issues/singleIssuedBook',{postId});
+        const response = await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/singleIssuedBook',{postId});
         dispatch({
            type:'SINGLE_ISSUE_REQUEST_SUCCESS',
            payload:response.data
@@ -56,7 +56,7 @@ export const getUserIssuedBook = () => async (dispatch, getState) => {
     };
 
     try {
-        const response = await axios.get(`/api/issues/issuedBook`, config);
+        const response = await axios.get(`http://altura-prep-library-be-production.up.railway.app/api/issues/issuedBook`, config);
         dispatch({
             type: "USER_ISSUED_BOOK_SUCCESS",
             payload: response.data,
@@ -77,7 +77,7 @@ export const getAllIssuedBook = () => async (dispatch) => {
    
 
     try {
-        const response = await axios.get(`/api/issues/allIssuedBook`);
+        const response = await axios.get(`http://altura-prep-library-be-production.up.railway.app/api/issues/allIssuedBook`);
       
         dispatch({
             type: "ALL_ISSUED_BOOK_SUCCESS",
@@ -95,7 +95,7 @@ export const filterallIssuedBook = (searchKey)=> async dispatch =>{
    
     var filterItem ;
     try {
-        const response = await axios.get('/api/issues/allIssuedBook');
+        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/issues/allIssuedBook');
         
         filterItem = response.data.filter(item => item.userName.toLowerCase().includes(searchKey.toLowerCase()));
       
@@ -116,7 +116,7 @@ export const getAllBookIssueReq = ()=> async dispatch =>{
         type:'GET_All_ISSUES_REQUEST'
     })
     try {
-        const response = await axios.get('/api/issues/allIssueRequest');
+        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/issues/allIssueRequest');
         dispatch({
            type:'GET_All_ISSUES_SUCCESS',
            payload:response.data
@@ -134,7 +134,7 @@ export const getAllBookReturnReq = ()=> async dispatch =>{
         type:'GET_All_RETURN_REQUEST'
     })
     try {
-        const response = await axios.get('/api/issues/allreturnedBook');
+        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/issues/allreturnedBook');
         dispatch({
            type:'GET_All_RETURN_SUCCESS',
            payload:response.data
@@ -150,9 +150,9 @@ export const getAllBookReturnReq = ()=> async dispatch =>{
 export const issuedReq = (bookId,postId)=> async dispatch =>{
    
     try {
-         await axios.post('/api/issues/issuedReqAccept' , {bookId,postId})
+         await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/issuedReqAccept' , {bookId,postId})
        
-        const response2 = await axios.get('/api/issues/allIssueRequest');
+        const response2 = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/issues/allIssueRequest');
         dispatch({
            type:'GET_All_ISSUES_SUCCESS',
            payload:response2.data
@@ -167,7 +167,7 @@ export const issuedReq = (bookId,postId)=> async dispatch =>{
 export const returnReqAction = (obj)=> async dispatch =>{
    
     try {
-         await axios.post('/api/issues/returnReq' , obj)
+         await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/returnReq' , obj)
        
        
         dispatch({
@@ -186,9 +186,9 @@ export const issuedReqDeletedByAdmin = (postId)=> async dispatch =>{
     
     
     try {
-       await axios.post('/api/issues/issueReqDelete' , {postId})
+       await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/issueReqDelete' , {postId})
        
-        const response2 = await axios.get('/api/issues/allIssueRequest');
+        const response2 = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/issues/allIssueRequest');
         dispatch({
            type:'GET_All_ISSUES_SUCCESS',
            payload:response2.data
@@ -209,8 +209,8 @@ export const issueABookReturn = (postId)=> async dispatch =>{
     };
  
     try {
-        await axios.post('/api/issues/issuedBookDelete',{postId});
-        const response2 = await axios.get(`/api/issues/issuedBook`, config);
+        await axios.post('http://altura-prep-library-be-production.up.railway.app/api/issues/issuedBookDelete',{postId});
+        const response2 = await axios.get(`http://altura-prep-library-be-production.up.railway.app/api/issues/issuedBook`, config);
        
         dispatch({
             type: "USER_ISSUED_BOOK_SUCCESS",
