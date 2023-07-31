@@ -6,7 +6,7 @@ export const registerUser = (user) => async dispatch => {
     })
 
     try {
-        const res = await axios.post("http://altura-prep-library-be-production.up.railway.app/api/users/signup", user);
+        const res = await axios.post("https://altura-prep-library-be-production.up.railway.app/api/users/signup", user);
         console.log(res)
         dispatch({
             type: 'USER_REGISTER_SUCCESS'
@@ -26,7 +26,7 @@ export const loginUser = (user) => async dispatch => {
     })
 
     try {
-        const res = await axios.post("http://altura-prep-library-be-production.up.railway.app/api/users/signin", user);
+        const res = await axios.post("https://altura-prep-library-be-production.up.railway.app/api/users/signin", user);
         console.log(res)
         dispatch({
             type: 'USER_LOGIN_SUCCESS',
@@ -64,7 +64,7 @@ export const userProfile = () => async (dispatch, getState) => {
     };
 
     try {
-        const response = await axios.get(`http://altura-prep-library-be-production.up.railway.app/api/users/profile`, config);
+        const response = await axios.get(`https://altura-prep-library-be-production.up.railway.app/api/users/profile`, config);
         dispatch({
             type: "USER_PROFILE_SUCCESS",
             payload: response.data,
@@ -83,7 +83,7 @@ export const getAllStudent = ()=> async dispatch =>{
         type:'GET_STUDENTS_REQUEST'
     })
     try {
-        const response = await axios.get('http://altura-prep-library-be-production.up.railway.app/api/users/allStudent');
+        const response = await axios.get('https://altura-prep-library-be-production.up.railway.app/api/users/allStudent');
    
         dispatch({
            type:'GET_STUDENTS_SUCCESS',
@@ -102,8 +102,8 @@ export const removeAStudent = (postId)=> async dispatch =>{
    
  
     try {
-         await axios.post('http://altura-prep-library-be-production.up.railway.app/api/users/removeStudent',{postId});
-        const response2 = await axios.get(`http://altura-prep-library-be-production.up.railway.app/api/users/allStudent`);
+         await axios.post('https://altura-prep-library-be-production.up.railway.app/api/users/removeStudent',{postId});
+        const response2 = await axios.get(`https://altura-prep-library-be-production.up.railway.app/api/users/allStudent`);
        
         dispatch({
             type:'GET_STUDENTS_SUCCESS',
