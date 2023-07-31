@@ -46,7 +46,7 @@ export const filterBook = (searchKey)=> async dispatch =>{
     var filterItem ;
     try {
         const response = await axios.get('https://altura-prep-library-be-production.up.railway.app/api/books/allBook');
-        filterItem = response.data.filter(pizza => pizza.isbn.toLowerCase().includes(searchKey.toLowerCase()));
+        filterItem = response.data.filter(pizza => pizza.isbn.toLowerCase().includes(searchKey));
       
         dispatch({
            type:'GET_BOOKS_SUCCESS',

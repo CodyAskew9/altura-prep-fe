@@ -46,10 +46,10 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
            
 
         }
-        const {title,author,publisher,isbn,_id,copies} = book ;
+        const {title,author,level,isbn,_id,copies} = book ;
      
         const issueUser = {
-            title,author,publisher,isbn,userId,bookId:_id,userBranch,userName,copies
+            title,author,level,isbn,userId,bookId:_id,userBranch,userName,copies
         }
         if(book.copies){
             dispatch(issueABook(issueUser))

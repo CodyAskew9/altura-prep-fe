@@ -6,7 +6,7 @@ import {Toast} from "react-bootstrap"
 const AddBook = () => {
     const[title,setTitle] = useState("")
     const[author,setAuthor] = useState("")
-    const[publisher,setPublisher] = useState("")
+    const[level,setLevel] = useState("")
     const[isbn,setIsbn] = useState("")
     const[copies,setCopies] = useState("")
     const [show, setShow] = useState(false);
@@ -14,13 +14,13 @@ const AddBook = () => {
     const dispatch = useDispatch()
 
       const PostData = () => {
-        const book = { title,author,publisher,isbn,copies };
+        const book = { title,author,level,isbn,copies };
         
         dispatch(addOneBook(book));
         setShow(true)
         setTitle("")
         setAuthor("")
-        setPublisher("")
+        setLevel("")
         setCopies("")
         setIsbn("")
     };
@@ -42,8 +42,8 @@ const AddBook = () => {
                         onChange={(e) => setAuthor(e.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
-                        <input type="text" placeholder="Publisher" value={publisher}  style={{height:"60px"}}
-                        onChange={(e) => setPublisher(e.target.value)} className="form-control" />
+                        <input type="text" placeholder="level" value={level}  style={{height:"60px"}}
+                        onChange={(e) => setLevel(e.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                         <input type="text" placeholder="isbn" value={isbn} style={{height:"60px"}}
