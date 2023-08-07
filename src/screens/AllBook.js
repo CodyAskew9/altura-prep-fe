@@ -20,12 +20,13 @@ const AllBook = () => {
    const {all_IssuedBook} = useSelector(state => state.allIssuedBookReducer)
    const {currentUser} = useSelector(state => state.userLoginReducer)
    const userId = currentUser.user._id ;
-  const  userBranch  =  currentUser.user.branch ;
-  const userName = currentUser.user.name ;
-  let sendReq = true
-let filterBook22 = all_IssuedBook && all_IssuedBook.filter(book=> book.userId == userId);
-let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
-
+   const  userBranch  =  currentUser.user.branch ;
+   const userName = currentUser.user.name ;
+   let sendReq = true
+   let filterBook22 = all_IssuedBook && all_IssuedBook.filter(book=> book.userId == userId);
+   let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
+   
+   
     
 
     const postData = (book)=>{

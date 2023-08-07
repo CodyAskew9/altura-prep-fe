@@ -76,7 +76,7 @@ Management System</p>
                     errors.name && touched.name ? "input-error" : null
                   }
                 />
-                <ErrorMessage name="name" component="span" className="error" />
+                
               </div>
 
               <div className="form-row">

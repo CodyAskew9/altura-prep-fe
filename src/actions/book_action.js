@@ -43,11 +43,12 @@ export const filterBook = (searchKey)=> async dispatch =>{
     dispatch({
         type:'GET_BOOKS_REQUEST'
     })
-    var filterItem ;
+    let filterItem ;
     try {
         const response = await axios.get('https://altura-prep-library-be-production.up.railway.app/api/books/allBook');
-        filterItem = response.data.filter(pizza => pizza.isbn.toLowerCase().includes(searchKey));
+        filterItem = response.data.filter(pizza => pizza.title.toLowerCase().includes(searchKey));
       
+        console.log(filterItem)
         dispatch({
            type:'GET_BOOKS_SUCCESS',
            payload:filterItem
@@ -55,7 +56,7 @@ export const filterBook = (searchKey)=> async dispatch =>{
     } catch (error) {
        dispatch({
            type:'GET_BOOKS_FAILED',
-           payload:error
+           payload:error,
        })
     }
 }
