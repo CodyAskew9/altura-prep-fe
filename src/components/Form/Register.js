@@ -13,8 +13,8 @@ import Barcode from 'react-barcode';
 const signInSchema = Yup.object().shape({
     name:Yup.string()
     .required("Name is required")
-    .min(3, "Password is too short - should be 3 chars minimum")
-    .max(15, "Password is too short - should be 15 chars minimum"),
+    .min(1, "Password is too short - should be 3 chars minimum")
+    .max(30, "Password is too short - should be 15 chars minimum"),
   email: Yup.string().email().required("Email is required"),
   password: Yup.string()
     .required("Password is required")
